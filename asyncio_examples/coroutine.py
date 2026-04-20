@@ -4,13 +4,13 @@ import asyncio
 async def fetch_data(id, sleep_time):
     print(f"Coroutine {id} fetching data")
     await asyncio.sleep(sleep_time)
-    return {"id": id, "data" : f"Data: {id}"}
+    return {"id": id, "data": f"Data: {id}"}
 
 
 async def main():
-    task1 = asyncio.create_task(fetch_data(1,2))
-    task2 = asyncio.create_task(fetch_data(2,3))
-    task3 = asyncio.create_task(fetch_data(3,1))
+    task1 = asyncio.create_task(fetch_data(1, 2))
+    task2 = asyncio.create_task(fetch_data(2, 3))
+    task3 = asyncio.create_task(fetch_data(3, 1))
 
     result1 = await task1
     result2 = await task2
